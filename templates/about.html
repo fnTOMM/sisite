@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+        <h1>Данный сайт разработан для сравнения выбранного стримера
+            с топ-5 стримеров СНГ
+        </h1>
+
+    <a href = "https://streaminside.ru/streamers">Список стримеров тут</a><br>
+    <br>
+    <button type="submit" onclick="window.location.href='{{ url_for('home') }}'">Начать</button>
+    <br>
+    <h5>Site by fnTOMM</h5>
+    </div>
+{% endblock %}

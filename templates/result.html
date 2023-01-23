@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Введенный стример: {{streamer[-1]}}</h1>
+
+<ol>
+    {% for i in range (6) -%}
+            <li>{{streamer[i]}} - {{folowers[i]}} фоловеров</li>
+        {% endfor -%}
+    
+</ol>
+
+
+{% if (data) == "Нет данных" %}
+<p inline style="color: red">{{data}}</p>
+{% else %}
+<img src="data:image/png;base64, {{ data }}">
+{% endif %}
+{% endblock %}

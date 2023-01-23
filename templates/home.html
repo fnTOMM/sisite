@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+        <h1>Статистика Twitch канала на базе сайта Stream Inside</h1>
+        <form action="{{ url_for('result') }}" method="post">
+
+            <p>
+                <label for="a">Введите ник канала Twitch: </label>
+                <input type="text" name="streamer" value="" required>
+            </p>
+            
+            <button type="submit">Изучить стримера</button>
+        </form>
+    {% if (answer) == "нет на сайте"  %}
+    <p>Стримера не существует на сайте</p>
+    {% elif (answer) == "не твич" %}
+    <p>Введенный пользователь не является твич стримером</p>
+    {% elif (answer) == "входит" %}
+    <p>Стример входит в топ-5. введите другого</p>
+    {% endif %}
+    <br><br>
+    <a href = "https://streaminside.ru/streamers">Стримеры</a>
+    </div>
+{% endblock %}
+

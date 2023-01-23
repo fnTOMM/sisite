@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h3>
+                    <a href="{{ url_for('home') }}">Главная страница</a>
+                    <a href="{{ url_for('about') }}">О сайте</a>
+                </h3>
+            </div>
+        </header>
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
